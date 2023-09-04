@@ -1,125 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- Copyright (c) 2021 Huawei Device Co., Ltd.
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
-
-    This is the configuration file template for OpenHarmony OSS Audit Tool, please copy it to your
-project root dir and modify it refer to OpenHarmony/tools_oat/README.
-    All configurations in this file will be merged to OAT-Default.xml, if you have any questions or
-concerns, please create issue in OpenHarmony/tools_oat and @jalenchen or chenyaxun.
-
-    licensefile:
-    1.If the project don't have "LICENSE" in root dir, please define all the license files in this
-project in , OAT will check license files according to this rule.
-
-    policylist:
-    1. policy: If the OAT-Default.xml policies do not meet your requirements, please add policies here.
-    2. policyitem: The fields type, name, path, desc is required, and the fields rule, group,
-filefilter is optional,the default value is:
-    <policyitem type="" name="" path="" desc="" rule="may" group="defaultGroup"
-filefilter="defaultPolicyFilter"/>
-    3. policyitem type:
-        "compatibility" is used to check license compatibility in the specified path;
-        "license" is used to check source license header in the specified path;
-        "copyright" is used to check source copyright header in the specified path;
-        "import" is used to check source dependency in the specified path, such as import ... ,include ...
-        "filetype" is used to check file type in the specified path, supported file types: archive, binary
-        "filename" is used to check whether the specified file exists in the specified path(projectroot
-means the root dir of the project), supported file names: LICENSE, README, README.OpenSource
-    4. policyitem name: This field is used for define the license, copyright, "*" means match all, the
-"!" prefix means could not match this value. For example, "!GPL" means can not use GPL license.
-    5. policyitem path: This field is used for define the source file scope to apply this policyitem,
-the "!" prefix means exclude the files. For example, "!.*/lib/.*" means files in lib dir will be
-exclude while process this policyitem.
-    6. policyitem rule and group: These two fields are used together to merge policy results. "may"
-policyitems in the same group means any one in this group passed, the result will be passed.
-    7. policyitem filefilter: Used to bind filefilter which define filter rules.
-    7. policyitem desc: Used to describe the reason of this policy item, committers will check this
-while merging the code.
-    8. filefilter: Filter rules, the type filename is used to filter file name, the type filepath is
-used to filter file path.
-
-    Note:If the text contains special characters, please escape them according to the following rules:
-    " == &quot;
-    & == &amp;
-    ' == &apos;
-    < == &lt;
-    > == &gt;
--->
-
 <configuration>
     <oatconfig>
         <policylist>
             <policy name="projectPolicy" desc="">
-                
-
                 <policyitem type="compatibility" name="zlib-acknowledgement" path="simd/arm.*" desc="" />
                 <policyitem type="compatibility" name="zlib-acknowledgement" path="simd/nasm.*" desc="" />
                 <policyitem type="compatibility" name="zlib-acknowledgement" path="gtest.*" desc="" />
                 <policyitem type="compatibility" name="Commander" path=".*" desc="" />
                 <policyitem type="compatibility" name="Lane" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Thomas G. Lane" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Thomas G. Lane1" path=".*" desc="" />
-                 <policyitem type="compatibility" name="Commander" path=".*" desc="" />
-                  <policyitem type="compatibility" name="D. R. Commander" path="simd/i386.*" desc="" />2011, 2016, D. R. Commander
-                   <policyitem type="compatibility" name="2016, D. R. Commander" path="simd/i386.*" desc="" />
-                   <policyitem type="compatibility" name="Thomas G. Lane" path="simd/arm.*" desc="" />
-                   <policyitem type="compatibility" name="Intel Corporation" path="simd/i386.*" desc="" />
-                   <policyitem type="compatibility" name="Copyrigh" path="simd/i386.*" desc="" />
-                   <policyitem type="compatibility" name="Copyrigh1" path="simd/i386.*" desc="" />
-                   <policyitem type="compatibility" name="Copyrigh2" path="simd.*" desc="" />
-                    <policyitem type="compatibility" name="Copyrigh3" path="simd/i386.*" desc="" />
-                    <policyitem type="compatibility" name="Copyrigh4" path="simd/i386.*" desc="" />
-                    <policyitem type="compatibility" name="Copyrigh5" path="simd/nasm.*" desc="" />
-                    <policyitem type="compatibility" name="Copyright4" path="simd/x86_64.*" desc="" />
-                   
-                    <policyitem type="compatibility" name="Intel Corporation" path="simd.*" desc="" />
-                    <policyitem type="compatibility" name="Copyright4" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright6" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright7" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright8" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright9" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright10" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright11" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright12" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright13" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright14" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright15" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright16" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright17" path=".*" desc="" />
-                    <policyitem type="compatibility" name="Copyright18" path=".*" desc="" />
-                     <policyitem type="compatibility" name="Copyright19" path=".*" desc="" />
-                     <policyitem type="compatibility" name="Copyright20" path=".*" desc="" />
-                      <policyitem type="compatibility" name="Copyright21" path=".*" desc="" />
-                      <policyitem type="compatibility" name="Copyright22" path=".*" desc="" />
-                      <policyitem type="compatibility" name="Copyright23" path=".*" desc="" />
-                      <policyitem type="compatibility" name="Copyright24" path=".*" desc="" />
-                      <policyitem type="compatibility" name="Copyright25" path=".*" desc="" />
-                <!-- <policyitem type="compatibility" name="Khronos License" path=".*" desc="" />
-                <policyitem type="compatibility" name="Apache-2.0" path=".*" desc="" />
-                <policyitem type="compatibility" name="GPLStyleLicense" path=".*" desc="" />
-                <policyitem type="compatibility" name="LLVM License" path="third_party/llvm-subzero.*" desc="" />
-                <policyitem type="compatibility" name="LLVM License" path="third_party/subzero.*" desc="" />
-                <policyitem type="compatibility" name="LLVM License" path="third_party/llvm-10.0.*" desc="" />
-                <policyitem type="compatibility" name="GPL-3.0+" path=".*" desc="" />
-                <policyitem type="compatibility" name="Spencer-94" path=".*" desc="" />
-                <policyitem type="compatibility" name="OpenBSD" path=".*" desc="" />
-                <policyitem type="compatibility" name="original license" path="third_party/llvm-subzero/include/llvm/Support.*" desc="" />
-                <policyitem type="compatibility" name="original license" path="third_party/llvm-10.0/llvm/include/llvm/Support.*" desc="" />
-                <policyitem type="compatibility" name="Khronos License2" path="include.*" desc="" />
-                <policyitem type="compatibility" name="Khronos License3" path="include.*" desc="" /> -->
+                <policyitem type="compatibility" name="Thomas G. Lane" path=".*" desc="" />
+                <policyitem type="compatibility" name="Thomas G. Lane1" path=".*" desc="" />
+                <policyitem type="compatibility" name="Commander" path=".*" desc="" />
+                <policyitem type="compatibility" name="D. R. Commander" path="simd/i386.*" desc="" />2011, 2016, D. R. Commander
+                <policyitem type="compatibility" name="2016, D. R. Commander" path="simd/i386.*" desc="" />
+                <policyitem type="compatibility" name="Thomas G. Lane" path="simd/arm.*" desc="" />
+                <policyitem type="compatibility" name="Intel Corporation" path="simd/i386.*" desc="" />
+                <policyitem type="compatibility" name="Copyrigh" path="simd/i386.*" desc="" />
+                <policyitem type="compatibility" name="Copyrigh1" path="simd/i386.*" desc="" />
+                <policyitem type="compatibility" name="Copyrigh2" path="simd.*" desc="" />
+                <policyitem type="compatibility" name="Copyrigh3" path="simd/i386.*" desc="" />
+                <policyitem type="compatibility" name="Copyrigh4" path="simd/i386.*" desc="" />
+                <policyitem type="compatibility" name="Copyrigh5" path="simd/nasm.*" desc="" />
+                <policyitem type="compatibility" name="Copyright4" path="simd/x86_64.*" desc="" />    
+                <policyitem type="compatibility" name="Intel Corporation" path="simd.*" desc="" />
+                <policyitem type="compatibility" name="Copyright4" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright6" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright7" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright8" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright9" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright10" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright11" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright12" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright13" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright14" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright15" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright16" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright17" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright18" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright19" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright20" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright21" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright22" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright23" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright24" path=".*" desc="" />
+                <policyitem type="compatibility" name="Copyright25" path=".*" desc="" />
             </policy>
         </policylist>
         <filefilterlist>
@@ -148,153 +73,102 @@ used to filter file path.
             </filefilter> 
         </filefilterlist>
         <licensematcherlist>
-            <!-- <licensematcher name="LLVM License" desc="">
-                <licensetext name="
-                /* This file is distributed under the University of Illinois Open Source      */
-                /* License. See LICENSE.TXT for details.                                      */
-                " desc="" />
-                </licensematcher>
-            <licensematcher name="OpenBSD" desc="">
-                <licensetext name="
-                * This code is derived from OpenBSD's libc, original license follows:
-                *
-                * Copyright (c) 1998 Todd C. Miller &gt;Todd.Miller@courtesan.com&gt;
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="original license" desc="">
-                <licensetext name="
-                * This is an OpenSSL-compatible implementation of the RSA Data Security, Inc.
-                * MD5 Message-Digest Algorithm (RFC 1321).
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Khronos License2" desc="">
-                <licensetext name="
-                * Copyright (c) 2008-2018 The Khronos Group Inc.
-            " desc="" />
-            </licensematcher>
-            <licensematcher name="Khronos License3" desc="">
-                <licensetext name="
-                * Copyright (c) 2007-2016 The Khronos Group Inc
-            " desc="" />
-            </licensematcher> -->
             <licensematcher name="Khronos Group License" desc="">
                 <licensetext name="
                 * Copyright (c) 2013 The Khronos Group Inc.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Khronos Group License" desc="">
                 <licensetext name="
                 * Copyright (c) 2013 The Khronos Group Inc.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Commander" desc="">
                 <licensetext name="
                 * Copyright (C) 2015, 2018, D. R. Commander.
             " desc="" />
             </licensematcher>
-             
              <licensematcher name="Lane" desc="">
                 <licensetext name="
                 * Copyright (C) 1994-1997, Thomas G. Lane.
             " desc="" />
             </licensematcher> 
-
             <licensematcher name="Thomas G. Lane" desc="">
                 <licensetext name="
                 * Copyright (C) 1994-1996, Thomas G. Lane.
             " desc="" />
             </licensematcher> 
-            
             <licensematcher name="Thomas G. Lane1" desc="">
                 <licensetext name="
                  * Copyright (C) 1994-1998, Thomas G. Lan
             " desc="" />
             </licensematcher> 
-
             <licensematcher name="Commander" desc="">
                 <licensetext name="
                  * Copyright (C) 2011, 2014, D. R. Commander.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="D. R. Commander" desc="">
                 <licensetext name="
                  ; Copyright (C) 2009-2011, 2014-2017, 2019, D. R. Commander.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="2011, 2016, D. R. Commander" desc="">
                 <licensetext name="
                 ; Copyright (C) 2011, 2016, D. R. Commander.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Thomas G. Lane" desc="">
                 <licensetext name="
                 * Copyright (C) 1991-1997, Thomas G. Lane.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Intel Corporation" desc="">
                 <licensetext name="
                 ; Copyright (C) 2015, Intel Corporation.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright" desc="">
                 <licensetext name="
                 ; Copyright (C) 2009, 2016, D. R. Commander.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright1" desc="">
                 <licensetext name="
                 ; Copyright (C) 2016, D. R. Commander.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright2" desc="">
                 <licensetext name="
                 ; Copyright (C) 2009, 2016, D. R. Commander.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright3" desc="">
                 <licensetext name="
                 ; Copyright (C) 2016, 2020, D. R. Commander.
             " desc="" />
             </licensematcher>
-
              <licensematcher name="Copyright4" desc="">
                 <licensetext name="
                ; Copyright (C) 1999-2006, MIYASAKA Masaru.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright5" desc="">
                 <licensetext name="
                ; Copyright (C) 2015, Intel Corporation.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright6" desc="">
                 <licensetext name="
                 * Copyright (C) 1991-1994, Thomas G. Lane.
             " desc="" />
             </licensematcher> 
-
             <licensematcher name="Copyright7" desc="">
                 <licensetext name="
                 * Copyright (C) 1991-1998, Thomas G. Lane.
  * Modified 2003-2008 by Guido Vollbeding.
             " desc="" />
             </licensematcher> 
-
- 
-
-
             <licensematcher name="Copyright8" desc="">
                 <licensetext name="
                 * This file was part of the Independent JPEG Group's software:
@@ -305,8 +179,6 @@ used to filter file path.
  * file.
             " desc="" />
             </licensematcher> 
-
-
             <licensematcher name="Copyright9" desc="">
                 <licensetext name="
                 * This file was part of the Independent JPEG Group's software:
@@ -314,8 +186,6 @@ used to filter file path.
  * libjpeg-turbo Modifications:
             " desc="" />
             </licensematcher> 
-
- 
             <licensematcher name="Copyright10" desc="">
                 <licensetext name="
                 * This file was part of the Independent JPEG Group's software:
@@ -326,10 +196,6 @@ used to filter file path.
  * file.
             " desc="" />
             </licensematcher>
-
-   
-
-
         <licensematcher name="Copyright11" desc="">
                 <licensetext name="
                         /*
@@ -345,14 +211,11 @@ used to filter file path.
  * This file contains routines to set the default Huffman tables, if they are
  * not already set.
  */
-
 /*
  * Huffman table setup routines
  */
             " desc="" />
             </licensematcher>
-
-
             <licensematcher name="Copyright12" desc="">
                 <licensetext name="
                         * transupp.h
@@ -377,42 +240,33 @@ used to filter file path.
  */
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright13" desc="">
                 <licensetext name="
              * Copyright (C) 1992-1997, Thomas G. Lane.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright14" desc="">
                 <licensetext name="
               * Copyright (C) 1991-1998, Thomas G. Lane.
             " desc="" />
             </licensematcher> 
-
             <licensematcher name="Copyright15" desc="">
                 <licensetext name="
               * This file was part of the Independent JPEG Group's software:
  * Copyright (C) 1991-1996, Thomas G. Lane.
             " desc="" />
             </licensematcher>
-
             <licensematcher name="Copyright16" desc="">
                 <licensetext name="
               URL: https://github.com/libjpeg-turbo/libjpeg-turbo
             " desc="" />
             </licensematcher>
-            
-
             <licensematcher name="Copyright17" desc="">
                 <licensetext name="
                * This file was part of the Independent JPEG Group's software:
  * Copyright (C) 1991-2020, Thomas G. Lane, Guido Vollbeding.
             " desc="" />
             </licensematcher>
-
-             
-
             <licensematcher name="Copyright18" desc="">
                 <licensetext name="
                libjpeg-turbo note:  This file has been modified by The libjpeg-turbo Project
@@ -422,41 +276,30 @@ README.  It is included only for reference.  Please see README.md for
 information specific to libjpeg-turbo.
             " desc="" />
             </licensematcher>
-             
-
             <licensematcher name="Copyright19" desc="">
                 <licensetext name="
                * This file was part of the Independent JPEG Group's software:
  * Copyright (C) 1995-1998, Thomas G. Lane..
             " desc="" />
             </licensematcher>
-
-             
-
             <licensematcher name="Copyright20" desc="">
                 <licensetext name="
                * Copyright (C) 1997-1998, Thomas G. Lane, Todd Newman.
  * Copyright (C) 2017, D. R. Commander.
             " desc="" />
             </licensematcher>
-             
-
             <licensematcher name="Copyright21" desc="">
                 <licensetext name="
                * Copyright (C) 2010, 2020, D. R. Commander.
  * For conditions of distribution and use, see the accompanying README.ijg
             " desc="" />
             </licensematcher>
-            
-
             <licensematcher name="Copyright22" desc="">
                 <licensetext name="
                * This file was part of the Independent JPEG Group's software:
  * Developed 1997-2015 by Guido Vollbeding.
             " desc="" />
-            </licensematcher>
-             
-
+            </licensematcher>   
             <licensematcher name="Copyright23" desc="">
                 <licensetext name="
                * Copyright (C) 2017-2018, D. R. Commander.
@@ -464,7 +307,6 @@ information specific to libjpeg-turbo.
  * file.
             " desc="" />
             </licensematcher>
-             
             <licensematcher name="Copyright24" desc="">
                 <licensetext name="
               * This file was part of the Independent JPEG Group's software:
@@ -475,8 +317,6 @@ information specific to libjpeg-turbo.
  * file.
             " desc="" />
             </licensematcher>
-             
- 
             <licensematcher name="Copyright25" desc="">
                 <licensetext name="
               * This file was part of the Independent JPEG Group's software:
@@ -485,7 +325,6 @@ information specific to libjpeg-turbo.
  * file
             " desc="" />
             </licensematcher>
-
         </licensematcherlist>
     </oatconfig>
 </configuration>
