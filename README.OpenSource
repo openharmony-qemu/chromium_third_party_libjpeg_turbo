@@ -1,7 +1,23 @@
 [
     {
-        "Name": "chromium_third_party_libjpeg_turbo",                   # 上游开源软件名全称
-        "License": "GPL-2.0-with-bison-exception","GPL-3.0+","Khronos License","zlib-acknowledgement","Commander" ,"Lane" ,"Thomas G. Lane" ,"Thomas G. Lane1","Commander","D. R. Commander","2016, D. R. Commander","Thomas G. Lane","Intel Corporation","Copyrigh"        # 上游开源软件中包含的许可证信息
+        "Name": "libjpeg_turbo",                   # 上游开源软件名全称
+        "License":"zlib-acknowledgement"     # 上游开源软件中包含的许可证信息
+        "License File": "LICENSE.md",       # 许可证所在文件路径
+        "Version Number": "02959c3ee17abacfd1339ec22ea93301292ffd56",
+        "Upstream URL": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git@02959c3ee17abacfd1339ec22ea93301292ffd56",   # 上游软件包发布地址
+        "Description": "libjpeg-turbo是一种JPEG图像编解码器的库"           # 开源软件功能描述
+    },
+    {
+        "Name": "libjpeg_turbo",                   # 上游开源软件名全称
+        "License":"Copyright25"     # 上游开源软件中包含的许可证信息
+        "License File": "LICENSE.md",       # 许可证所在文件路径
+        "Version Number": "02959c3ee17abacfd1339ec22ea93301292ffd56",
+        "Upstream URL": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git@02959c3ee17abacfd1339ec22ea93301292ffd56",   # 上游软件包发布地址
+        "Description": "libjpeg-turbo是一种JPEG图像编解码器的库"           # 开源软件功能描述
+    },
+    {
+        "Name": "libjpeg_turbo",                   # 上游开源软件名全称
+        "License":"Zlib"      # 上游开源软件中包含的许可证信息
         "License File": "LICENSE.md",       # 许可证所在文件路径
         "Version Number": "02959c3ee17abacfd1339ec22ea93301292ffd56",
         "Upstream URL": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git@02959c3ee17abacfd1339ec22ea93301292ffd56",   # 上游软件包发布地址
