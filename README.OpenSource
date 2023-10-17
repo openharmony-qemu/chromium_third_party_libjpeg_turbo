@@ -1,26 +1,11 @@
 [
     {
-        "Name": "libjpeg_turbo",                   # 上游开源软件名全称
-        "License":"zlib-acknowledgement"     # 上游开源软件中包含的许可证信息
-        "License File": "LICENSE.md",       # 许可证所在文件路径
+        "Name": "libjpeg_turbo",
+        "License":"BSD-3-Clause",
+        "License File": "LICENSE.md",
         "Version Number": "02959c3ee17abacfd1339ec22ea93301292ffd56",
-        "Upstream URL": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git@02959c3ee17abacfd1339ec22ea93301292ffd56",   # 上游软件包发布地址
-        "Description": "libjpeg-turbo是一种JPEG图像编解码器的库"           # 开源软件功能描述
-    },
-    {
-        "Name": "libjpeg_turbo",                   # 上游开源软件名全称
-        "License":"Copyright25"     # 上游开源软件中包含的许可证信息
-        "License File": "LICENSE.md",       # 许可证所在文件路径
-        "Version Number": "02959c3ee17abacfd1339ec22ea93301292ffd56",
-        "Upstream URL": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git@02959c3ee17abacfd1339ec22ea93301292ffd56",   # 上游软件包发布地址
-        "Description": "libjpeg-turbo是一种JPEG图像编解码器的库"           # 开源软件功能描述
-    },
-    {
-        "Name": "libjpeg_turbo",                   # 上游开源软件名全称
-        "License":"Zlib"      # 上游开源软件中包含的许可证信息
-        "License File": "LICENSE.md",       # 许可证所在文件路径
-        "Version Number": "02959c3ee17abacfd1339ec22ea93301292ffd56",
-        "Upstream URL": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git@02959c3ee17abacfd1339ec22ea93301292ffd56",   # 上游软件包发布地址
-        "Description": "libjpeg-turbo是一种JPEG图像编解码器的库"           # 开源软件功能描述
+        "Owner": "huangjiewen2@huawei.com",
+        "Upstream URL": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git@02959c3ee17abacfd1339ec22ea93301292ffd56",
+        "Description": "libjpeg-turbo是一种JPEG图像编解码器的库"
     }
 ]
