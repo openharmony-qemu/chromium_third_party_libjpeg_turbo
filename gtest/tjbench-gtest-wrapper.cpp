@@ -63,10 +63,10 @@ class TJBenchTest : public
 
   static void SetUpTestSuite() {
     base::FilePath resource_path;
-#if BUILDFLAG(IS_OHOS)
+    #if BUILDFLAG(IS_OHOS)
     base::RegisterPathProviderForOhosTest();
-#endif
-
+    #endif
+    
     ASSERT_TRUE(base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &resource_path));
     resource_path = resource_path.AppendASCII("third_party");
     resource_path = resource_path.AppendASCII("libjpeg_turbo");
@@ -137,10 +137,10 @@ class TJBenchTestMerged : public
 
   static void SetUpTestSuite() {
     base::FilePath resource_path;
-#if BUILDFLAG(IS_OHOS)
+    #if BUILDFLAG(IS_OHOS)
     base::RegisterPathProviderForOhosTest();
-#endif
-
+    #endif
+ 
     ASSERT_TRUE(base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &resource_path));
     resource_path = resource_path.AppendASCII("third_party");
     resource_path = resource_path.AppendASCII("libjpeg_turbo");
