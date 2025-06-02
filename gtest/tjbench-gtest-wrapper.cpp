@@ -25,9 +25,6 @@
 
 #include <gtest/gtest.h>
 #include <string>
-#if BUILDFLAG(IS_OHOS)
-#include "base/test/test_support_ohos.h"
-#endif
 
 extern "C" int tjbench(int argc, char *argv[]);
 
@@ -63,10 +60,6 @@ class TJBenchTest : public
 
   static void SetUpTestSuite() {
     base::FilePath resource_path;
-    #if BUILDFLAG(IS_OHOS)
-    base::RegisterPathProviderForOhosTest();
-    #endif
-    
     ASSERT_TRUE(base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &resource_path));
     resource_path = resource_path.AppendASCII("third_party");
     resource_path = resource_path.AppendASCII("libjpeg_turbo");
@@ -137,10 +130,6 @@ class TJBenchTestMerged : public
 
   static void SetUpTestSuite() {
     base::FilePath resource_path;
-    #if BUILDFLAG(IS_OHOS)
-    base::RegisterPathProviderForOhosTest();
-    #endif
- 
     ASSERT_TRUE(base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, &resource_path));
     resource_path = resource_path.AppendASCII("third_party");
     resource_path = resource_path.AppendASCII("libjpeg_turbo");
