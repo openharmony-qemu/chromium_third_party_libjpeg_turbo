@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "libjpeg_turbo",
+        "License":"BSD-3-Clause",
+        "License File": "LICENSE.md",
+        "Version Number": "927aabfcd26897abb9776ecf2a6c38ea5bb52ab6",
+        "Owner": "huamengzheng@huawei.com",
+        "Upstream URL": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git@927aabfcd26897abb9776ecf2a6c38ea5bb52ab6",
+        "Description": "libjpeg-turbo是一种JPEG图像编解码器的库"
+    }
+]
