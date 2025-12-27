@@ -44,6 +44,10 @@ std::string GetTargetDirectory() {
 #endif
 
 void GetTestFilePath(base::FilePath* path, const std::string filename) {
+#if BUILDFLAG(IS_OHOS)
+  base::RegisterPathProviderForOhosTest();
+#endif
+ 
   ASSERT_TRUE(base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, path));
   *path = path->AppendASCII("third_party");
   *path = path->AppendASCII("libjpeg_turbo");
