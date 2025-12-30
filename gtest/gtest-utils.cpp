@@ -25,6 +25,10 @@
 #include "crypto/obsolete/md5.h"
 #include "gtest-utils.h"
 
+#if BUILDFLAG(IS_OHOS)
+#include "base/test/test_support_ohos.h"
+#endif
+
 #if defined(OS_WIN)
 std::wstring GetTargetDirectory() {
   base::FilePath path;
