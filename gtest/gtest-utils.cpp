@@ -25,10 +25,6 @@
 #include "crypto/obsolete/md5.h"
 #include "gtest-utils.h"
 
-#if BUILDFLAG(IS_OHOS)
-#include "base/test/test_support_ohos.h"
-#endif
-
 #if defined(OS_WIN)
 std::wstring GetTargetDirectory() {
   base::FilePath path;
@@ -48,10 +44,6 @@ std::string GetTargetDirectory() {
 #endif
 
 void GetTestFilePath(base::FilePath* path, const std::string filename) {
-#if BUILDFLAG(IS_OHOS)
-  base::RegisterPathProviderForOhosTest();
-#endif
- 
   ASSERT_TRUE(base::PathService::Get(base::DIR_SRC_TEST_DATA_ROOT, path));
   *path = path->AppendASCII("third_party");
   *path = path->AppendASCII("libjpeg_turbo");
