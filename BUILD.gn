@@ -162,7 +162,7 @@ if (current_cpu == "x86" || current_cpu == "x64") {
       }
     } else if (is_mac || is_ios) {
       defines += [ "MACHO" ]
-    } else if (is_linux || is_android || is_fuchsia || is_chromeos) {
+    } else if (is_linux || is_android || is_fuchsia || is_chromeos || is_ohos) {
       defines += [ "ELF" ]
     }
   }
@@ -490,6 +490,12 @@ if (build_with_chromium) {
       "//testing/gtest",
       "//testing/gtest:gtest_main",
     ]
+
+    if (is_ohos) {
+      deps += [
+        "//base/test:test_support",
+      ]
+    }
 
     data = [ "testimages/" ]
 
